@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กำลังใจสำหรับพี่รัตน์</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #6a5acd;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #483d8b;
+        }
+        .message {
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        .hint-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffa07a;
+            color: white;
+            font-size: 0.9rem;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .hint-button:hover {
+            background-color: #ff6347;
+            transform: scale(1.1);
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+            .hint-button {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>กำลังใจสำหรับพี่รัตน์</h1>
+        <p>กดปุ่มเพื่อรับกำลังใจ!</p>
+        <button onclick="showMessage()">สุ่มกำลังใจ (ง •̀_•́)ง</button>
+        <div class="message" id="messageBox"></div>
+    </div>
+
+    <button class="hint-button" onclick="showHint()">คำใบ้</button>
+
+    <script>
+        const messages = [
+            "(ง •̀_•́)ง วันนี้พี่เก่งมากคับ สู้ต่อไปนะครับพี่!",
+            "พี่รัตน์สู้ ๆ คับบ! (ﾉ>ω<)ﾉ 💖",
+            "(๑˃̵ᴗ˂̵)و พี่เป็นพลังบวกทีมเสมอครับ ✨",
+            "ทำดีแล้วครับพี่ อย่าลืมพักบ้างน้า (￣︶￣)>",
+            "(づ｡◕‿‿◕｡)づ ส่งกำลังใจให้พี่รัตน์คับบ!",
+            "ระวังโดนหลอกจ๋งด้วยนะคับพี่ (° × ° )"
+        ];
+
+        function showMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            const messageBox = document.getElementById("messageBox");
+            messageBox.innerText = messages[randomIndex];
+        }
+
+        function showHint() {
+            alert("ม่าายยบอกก! (¬‿¬)");
+        }
+    </script>
+</body>
+</html>
